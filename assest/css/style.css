@@ -1,0 +1,577 @@
+/* preprossece */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--themecolor);
+}
+h1 {
+  font-size: 2.8rem;
+}
+h2 {
+  font-size: 1.5rem;
+  margin: 2.5rem 0;
+}
+h4 {
+  margin: 1.25rem;
+  color: var(--themecolor);
+}
+p {
+  font-size: 1.125rem;
+  color: var(--themecolor);
+  line-height: 1.8rem;
+  margin: 2rem 0;
+}
+/* variables */
+:root {
+  --themecolor: #808080;
+  --color: var(--themecolor);
+}
+
+/* global classes */
+.btn {
+  font-size: 0.8rem;
+  padding: 1.25rem 2rem;
+  border: 1px solid var(--themecolor);
+  margin: 2rem 0;
+}
+.btn:hover{
+  background: rgb(26, 26, 26);
+}
+.round {
+  border-radius: 2rem;
+}
+.container {
+  width: 95%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.section {
+  margin: 8rem 0;
+}
+.center {
+  text-align: center;
+}
+.left {
+  text-align: left;
+}
+/* x    global classes   x */
+
+/* header section :start here */
+#header {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
+    url(../images/banner-img2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 1rem;
+  color: #fff;
+}
+.navBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 15;
+  padding: 20px 0;
+  background: #232323;
+  width: 100%;
+}
+.navBar .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+.hamburger:hover .menubar {
+  right: 0;
+}
+.menubar {
+  position: fixed;
+  top: 0;
+  right: -213px;
+  height: 100vh;
+  background: #232323;
+  transition: 1s;
+}
+.menubar .close {
+  text-align: center;
+}
+.menubar .menu {
+  margin-top: 60px;
+}
+.menubar .menu li {
+  padding: 8px 20px;
+}
+.menubar .menu li a {
+  font-size: 1.2rem;
+}
+.socialIcons a {
+  padding: 15px 10px;
+}
+.bannar .title {
+  color: #ffffff;
+  font-size: 8rem;
+  margin-top: 12rem;
+}
+.bannar a {
+  color: #ffffff;
+}
+.bannar a:hover {
+  background: #fff;
+  color: var(--themecolor);
+  border-color: #ffffff;
+}
+.bannar p.arrowDown {
+  margin: 7rem;
+}
+/* x    header section end here     x */
+
+/* about section start here  */
+.about .aboutMe {
+  flex: 1;
+}
+.about .aboutMe h1 {
+  font-weight: 100;
+  margin: 1.8rem 0;
+}
+.about .aboutMe a.btn {
+  color: #000;
+}
+.about .aboutMe a.btn:hover {
+	color:white;
+}
+.about .image {
+  width: 100%;
+}
+.about .image img {
+  width: 100%;
+  background: linear-gradient(#ffffff00 30%, #000000a6);
+}
+/* x    about section start here     x */
+
+/* services section start here  */
+.servicesBoxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.services .servicesBoxes .serviceBox {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  height: 13rem;
+  /* width: 99%; */
+  min-width: 13rem;
+  max-width: 18rem;
+  margin: 1rem;
+  /* margin-left: max(auto,1rem); */
+  /* margin-right: max(auto,1rem); */
+  box-shadow: 5px 5px 5px 1px #0000001c;
+}
+.services .servicesBoxes .serviceBox .fontPart {
+  padding: 3.5rem;
+  border: 1px solid var(--themecolor);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  transition: all 0.6s ease;
+  height: 99.9%;
+  width: 100%;
+}
+.services .servicesBoxes .serviceBox:hover .fontPart {
+  transform: rotateX(90deg);
+  transform-origin: top;
+}
+.services .servicesBoxes .serviceBox .backPart {
+  position: absolute;
+  top: 100%;
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  background: rgb(71, 67, 67);
+  color: #fff;
+  transition: all 0.8s ease;
+}
+.services .servicesBoxes .serviceBox .backPart h4,
+.services .servicesBoxes .serviceBox .backPart p {
+  color: #ffffff;
+}
+.services .servicesBoxes .serviceBox:hover .backPart {
+  top: 0%;
+}
+object {
+  height: 40px;
+  width: 40px;
+}
+/* x    services section start here      x */
+
+/* mySkills start here  */
+.skills {
+  align-items: center;
+  margin: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.mySkills .skills .skillBox {
+  margin: 1rem auto;
+  margin-left: min(1rem, auto);
+  margin-right: min(1rem, auto);
+  width: 14rem;
+  padding: 1rem;
+  /* box-shadow: 0px 0px 50px 0px #0000001c; */
+}
+.mySkills .skills .skillBox .skill {
+  height: 12rem;
+  width: 12rem;
+  border: 0.5rem solid #e6e6e6;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0px 0px 5px 5px #00000054;
+}
+.mySkills .skills .skillBox .skill [class^="progress"] {
+  position: absolute;
+  top: -0.5rem;
+  left: -0.5rem;
+  height: 12rem;
+  width: 6rem;
+  border: 0.5rem solid #e6e6e6;
+  border-radius: 6rem 0 0 6rem;
+  border-right: none;
+  z-index: 5;
+  overflow: hidden;
+  background: #fff;
+}
+.mySkills .skills .skillBox .skill [class^="progressgain"] {
+  border: 0.48rem solid var(--themecolor);
+  border-right: none;
+  z-index: 4;
+  transform-origin: 100% 50%;
+  transition: all ease 1s;
+}
+.mySkills .skills .skillBox .skill [class^="progressgain1"] {
+  transition: all ease 1s;
+}
+.mySkills .skills .skillBox .skill:hover [class^="progressgain1"] {
+  transform: rotate(180deg);
+}
+.mySkills .skills .skillBox .skill .progressgain001 {
+  transition: all ease 0.2s;
+}
+.mySkills .skills .skillBox .skill .progressgain002 {
+  transition: all ease 0.4s;
+}
+.mySkills .skills .skillBox .skill .progressgain003 {
+  transition: all ease 0.6s;
+}
+.mySkills .skills .skillBox .skill .progressgain004 {
+  transition: all ease 0.8s;
+}
+.mySkills .skills .skillBox .skill .progressgain005 {
+  transition: all ease 1s;
+}
+.mySkills .skills .skillBox .skill .progressgain116 {
+  transition: all ease 1.2s;
+}
+.mySkills .skills .skillBox .skill .progressgain117 {
+  transition: all ease 1.4s;
+}
+.mySkills .skills .skillBox .skill .progressgain118 {
+  transition: all ease 1.6s;
+}
+.mySkills .skills .skillBox .skill .progressgain119 {
+  transition: all ease 1.8s;
+}
+.mySkills .skills .skillBox .skill .progressgain1110 {
+  transition: all ease 2s;
+}
+.mySkills .skills .skillBox .skill:hover [class^="progressgain11"] {
+  z-index: 5;
+}
+.mySkills .skills .skillBox .skill:hover .progressgain001 {
+  transform: rotate(36deg);
+}
+.mySkills .skills .skillBox .skill:hover .progressgain002 {
+  transform: rotate(72deg);
+}
+.mySkills .skills .skillBox .skill:hover .progressgain003 {
+  transform: rotate(108deg);
+}
+.mySkills .skills .skillBox .skill:hover .progressgain004 {
+  transform: rotate(144deg);
+}
+.mySkills .skills .skillBox .skill:hover .progressgain005 {
+  transform: rotate(180deg);
+}
+.mySkills .skills .skillBox .skill:hover .progressgain116 {
+  transform: rotate(216deg);
+}
+.mySkills .skills .skillBox .skill:hover .progressgain117 {
+  transform: rotate(252deg);
+}
+.mySkills .skills .skillBox .skill:hover .progressgain118 {
+  transform: rotate(288deg);
+}
+.mySkills .skills .skillBox .skill:hover .progressgain119 {
+  transform: rotate(324deg);
+}
+.mySkills .skills .skillBox .skill:hover .progressgain1110 {
+  transform: rotate(360deg);
+}
+.mySkills .skills .skillBox .skill .value {
+  margin: 0;
+  color: var(--themecolor);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+/* x    mySkills end here    x */
+
+/* testimonial section start here  */
+.testimonials .testimonial .client {
+  margin: 0 auto;
+  width: min(720px, 100%);
+}
+.testimonials .testimonial .client img {
+  width: 160px;
+  margin: auto 0.5rem;
+  background: linear-gradient(#ffffff00 30%, #000000a6);
+}
+.testimonials .testimonial .client .discription {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* x    testimonial section end here     x */
+
+/* articles section start here */
+.articles .articlesboxes .articleBox {
+  width: 350px;
+  margin: 3rem auto;
+}
+.articles .articlesboxes .articleBox:hover hr {
+  border-color: black;
+}
+.articles .articlesboxes .articleBox img {
+  width: 100%;
+}
+.articles .articlesboxes .articleBox h3 {
+  margin: 1rem 0;
+}
+.articles .articlesboxes .articleBox hr {
+  color: var(--themecolor);
+  border: 0.3px solid var(--themecolor);
+}
+.articles .articlesboxes .articleBox p {
+  margin-bottom: 3rem;
+}
+.articles .articlesboxes .articleBox a {
+  color: var(--themecolor);
+}
+.articles .articlesboxes .articleBox a:hover {
+	color: white;
+}
+
+/* x    articles section end here    x */
+
+/* contact */
+.contact .contactInfo form {
+  flex: 1;
+  overflow: hidden;
+}
+.contact .contactInfo form textarea,
+.contact .contactInfo form input {
+  width: 98%;
+  padding: 20px;
+  margin: 15px 0;
+  font-size: 1rem;
+  border: 1px solid var(--themecolor);
+  background: transparent;
+}
+.contact .contactInfo form input[type="submit"]:hover {
+	background: var(--themecolor);
+  color: white;
+}
+.contact .contactInfo .map {
+  flex: 1;
+  height: min(85vh, 550px);
+}
+/* x    contact    x */
+
+.returnToTop {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  padding: 8px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.651);
+}
+
+/* responsive */
+@media only screen and (min-width: 570px) and (max-width: 765px) {
+  .about .image {
+    flex: 1;
+  }
+}
+@media only screen and (min-width: 570px) {
+  .about {
+    display: flex;
+  }
+  .services .servicesBoxes .serviceBox {
+    min-width: 13rem;
+  }
+}
+@media only screen and (min-width: 766px) {
+  .container {
+    width: 80%;
+  }
+  .flexRow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    /* flex: 1; */
+  }
+  .about .image {
+    width: 350px;
+  }
+  .servicesBoxes {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  .bannar .title {
+    font-size: 7rem;
+  }
+  .bannar p.arrowDown {
+    margin: 6rem;
+  }
+  .section {
+    margin: 6rem 0;
+  }
+  h2 {
+    font-size: 1.4rem;
+    margin: 2.2rem 0;
+  }
+  h1 {
+    font-size: 2.6rem;
+  }
+  .about .aboutMe h1 {
+    margin: 0rem 0;
+  }
+  p {
+    line-height: 1.5rem;
+    margin: 1.6rem 0;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .bannar .title {
+    font-size: 6rem;
+    margin-top: 10rem;
+  }
+  .bannar p.arrowDown {
+    margin: 5rem;
+  }
+  .section {
+    margin: 4rem 0;
+  }
+  h2 {
+    font-size: 1.4rem;
+    margin: 2rem 0;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  p {
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+    margin: 1.4rem 0;
+  }
+  .services .servicesBoxes .serviceBox {
+    margin: 1rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .brand img {
+    width: 140px;
+  }
+  svg {
+    height: 24px;
+  }
+  .bannar .title {
+    font-size: 6rem;
+    margin-top: 8rem;
+  }
+  .bannar p.arrowDown {
+    margin: 4rem;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .brand img {
+    width: 100px;
+  }
+  svg {
+    height: 20px;
+  }
+  .bannar .title {
+    font-size: 5rem;
+    margin-top: 6rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+  }
+  .btn {
+    font-size: 0.7rem;
+    padding: 0.8rem 1.2rem;
+  }
+  .bannar p.arrowDown {
+    margin: 2.5rem;
+  }
+  .section {
+    margin: 3rem 0;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  .about .aboutMe h1 {
+    margin: 1rem 0;
+  }
+  p {
+    font-size: 1rem;
+    line-height: 1rem;
+    margin: 1.2rem 0;
+  }
+  .services .servicesBoxes .serviceBox {
+    height: 10rem;
+    margin: 1rem auto;
+  }
+  .services .servicesBoxes .serviceBox .fontPart {
+    padding: 2.4rem;
+  }
+  .socialIcons a {
+    padding: 15px 2px;
+  }
+  .contact .contactInfo form textarea,
+  .contact .contactInfo form input {
+    padding: 15px;
+    margin: 10px 0;
+  }
+  .mySkills .skills .skillBox {
+    margin: 1rem auto;
+  }
+}
